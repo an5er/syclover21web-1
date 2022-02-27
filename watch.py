@@ -158,7 +158,7 @@ def get_request(url):
     global req_head
 
     try:
-        r = requests.get(url=url, headers=headers)
+        r = requests.get(url=url, headers=headers,verify=False)
         req_head = r.request.headers
         rep_head = r.headers
         r.encoding = "utf-8"
@@ -180,7 +180,7 @@ def get_head(value):
         return False
 
 def get_server(value):
-    if value in str(rep_head['Server']):
+    if value in rep_head['Server']:
         return True
     else:
         return False

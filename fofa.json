@@ -4082,7 +4082,7 @@
             [
                 {
                     "match": "server_contains",
-                    "content": "apache"
+                    "content": "Apache"
                 }
             ],
             [
